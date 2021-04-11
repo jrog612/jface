@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+   <information>
+      <name>Jface</name>
+      <version>0.0.1</version>
+      <description>
+         <![CDATA[즈록의 블로그 스킨]]>
+      </description>
+      <license>
+         <![CDATA[MIT]]>
+      </license>
+   </information>
+   <author>
+      <name>Yongjin Jo</name>
+      <homepage>https://jrog.tistory.com</homepage>
+      <email>jrog612@gmail.com</email>
+   </author>
+</skin>

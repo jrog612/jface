@@ -1,0 +1,9 @@
+mixin textboxList(type)
+  #{`s_${type}_container`}
+    .textbox-list
+      ul(uk-accordion='multiple: true; animation: false; toggle: .item-footer > a.more; content: ul.textbox-children; targets: > li.textbox-list-item')
+        if process.env.NODE_ENV === 'development' && type === 'rp'
+          li#ttMorePreviousCommentsFor6.tt_more_preview_comments_wrap.uk-open(onclick='getEntryCommentsByPaging(6); return false;' style='text-align:center;cursor:pointer')
+            span.tt_more_preview_comments_text 이전 댓글 더보기
+        #{`s_${type}_rep`}
+          +textboxListItem(type)

@@ -1,0 +1,106 @@
+@import "../variables";
+
+.jinput {
+  border: none;
+  color: white;
+
+  &.search {
+    background-color: $background-level1;
+  }
+}
+
+textarea {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.textbox-form {
+  .jtextarea {
+    background-color: $background-level2;
+    border-radius: 16px;
+    padding: 20px;
+    height: 160px;
+    width: 100%;
+
+    textarea {
+      background-color: transparent;
+      resize: none;
+      width: 100%;
+      height: 120px;
+      border: none;
+      outline: none;
+      color: white;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  }
+
+  #form-footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .form-buttons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      > div {
+        margin-left: 20px;
+      }
+
+      .submit-btn {
+        button {
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      .secret-checkbox {
+        #secret {
+          display: none;
+        }
+
+        #secret-label::before {
+          content: '\f3c1';
+          font-weight: 600;
+          font-family: 'Font Awesome 5 Free';
+          color: white;
+          font-size: 1.25rem;
+        }
+
+        input[type=checkbox]:checked + #secret-label::before {
+          content: '\f023';
+        }
+      }
+    }
+
+    .guest-input-form {
+      display: flex;
+
+      .guest-input {
+        margin-right: 16px;
+        width: 130px;
+
+        input {
+          border-radius: 4px;
+          width: 100%;
+          border: none;
+          outline: none;
+          color: white;
+          padding: 4px;
+          background-color: $background-level2;
+        }
+      }
+    }
+  }
+}
+

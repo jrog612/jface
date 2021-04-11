@@ -1,0 +1,25 @@
+mixin guestInputForm(type)
+  .guest-input-form
+    .guest-input
+      input(type='text' name=`[##_${type}_input_name_##]` value=`[##_${type}_name_##]` placeholder=`이름`)
+    .guest-input
+      input(type=`password` name=`[##_${type}_input_password_##]` value=`[##_${type}_password_##]` placeholder=`패스워드`)
+
+
+mixin textboxForm(type)
+  #{`s_${type}_input_form`}
+    .textbox-form
+      .jtextarea
+        textarea(name=`[##_${type}_textarea_body_##]`)
+      #form-footer
+        .guest-input-form
+          //+guestInputForm(type)
+          #{`s_${type}_member`}
+            #{type === 'guest' ? 's_guest_form' : 's_rp_guest'}
+              +guestInputForm(type)
+        .form-buttons
+          .secret-checkbox
+            input#secret(type='checkbox' name=`[##_${type}_input_is_secret_##]`)
+            label#secret-label(for='secret')
+          .submit-btn
+            button(type="submit" onclick=`[##_${type}_onclick_submit_##]`): i(class="fas fa-check fa-lg")

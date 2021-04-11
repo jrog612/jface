@@ -1,0 +1,66 @@
+@import 'variables';
+@import "tinyDrawer";
+@import 'mixins/index';
+@import 'views/index';
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  pointer-events: initial;
+}
+
+*, *::before, *::after {
+  outline: none;
+  word-break: break-all;
+}
+
+html,
+h1, h2, h3, h4, h5, :not(pre) > code,
+input, textarea {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+html {
+  background-color: $background-level1;
+  color: white;
+
+  body {
+    overflow-x: hidden;
+  }
+
+  ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: rgba(white, .9);
+    text-decoration: none !important;
+
+    &:hover {
+      color: white;
+      transition-duration: .2s;
+    }
+  }
+
+  a, button {
+    pointer-events: initial !important;
+  }
+}
+
+#jface-root {
+  height: 100vh;
+  text-align: center;
+}
+
+.notyf-black {
+  .notyf__wrapper {
+    padding: 12px 0;
+  }
+}

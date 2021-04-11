@@ -1,0 +1,32 @@
+mixin articleListItem
+  li.article-list-item
+    .list-item-container
+      a(href=`[##_list_rep_link_##]`).item-body
+        h1.title #{`[##_list_rep_title_##]`}
+        p.summary  #{`[##_list_rep_summary_##]`}
+      .item-footer.p-s1
+        .category: a(href=`[##_list_rep_category_link_##]`) #{`[##_list_rep_category_##]`}
+        .published_at
+          span #{`[##_list_rep_date_year_##]`}.#{`[##_list_rep_date_month_##]`}.#{`[##_list_rep_date_day_##]`}. #{`[##_list_rep_date_hour_##]`}:#{`[##_list_rep_date_minute_##]`}
+
+
+mixin textboxListItem(type, isChild=false)
+  li.textbox-list-item(class=isChild ? 'textbox-child' : 'textbox-parent', id=`[##_${type}_rep_id_##]`)
+    div.list-item-container
+      .item-header
+        img.author-thumbnail.lazyload(data-src=`[##_${type}_rep_logo_##]` data-sizes='auto' width='48' height='48')
+        .info
+          .author #{`[##_${type}_rep_name_##]`}
+          .published_at.p-s1 #{`[##_${type}_rep_date_##]`}
+      .item-body.p4 #{`[##_${type}_rep_desc_##]`}
+      .item-footer
+        a.p-s1(href="#" onclick=`[##_${type}_rep_onclick_delete_##]`) 수정/삭제
+        if !isChild
+          a.p-s1(href="#" onclick=`[##_${type}_rep_onclick_reply_##]`) 답글쓰기
+          a.more.p-s1(href="#") 댓글보기
+      if !isChild
+        ul.textbox-children
+          - var reply = type === 'rp' ? 'rp2' : 'guest_reply'
+          #{`s_${reply}_container`}
+            #{`s_${reply}_rep`}
+              +textboxListItem(type, true)

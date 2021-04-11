@@ -1,0 +1,69 @@
+@import "variables";
+
+$drawer-width: 300px;
+$drawer-speed: .2s;
+$backdrop-background: rgba(0, 0, 0, .5);
+
+// CORE
+
+drawer-menu,
+[data-drawer-backdrop] {
+  top: 0;
+  right: 0;
+  position: fixed;
+  display: block;
+  display: none;
+
+  height: 100%;
+}
+
+[data-drawer] {
+  drawer-menu,
+  [data-drawer-backdrop] {
+    display: block;
+  }
+}
+
+drawer-menu {
+  z-index: 99999;
+  margin-right: calc(#{$drawer-width} * -1);
+  width: $drawer-width;
+  transition: margin-right $drawer-speed;
+  background: $background-level3;
+}
+
+[data-drawer-backdrop] {
+  z-index: 99998;
+  width: 100%;
+
+  visibility: hidden;
+  opacity: 0;
+
+  background: $backdrop-background;
+
+  transition-property: opacity, visibility;
+  transition-duration: $drawer-speed, 0s;
+  transition-delay: 0s, $drawer-speed;
+}
+
+[data-drawer="true"] {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  [data-drawer-backdrop] {
+    visibility: visible;
+    opacity: 1;
+
+    transition-property: visibility, opacity;
+    transition-duration: 0s, $drawer-speed;
+    transition-delay: 0s, 0s;
+  }
+
+  drawer-menu {
+    margin-right: 0;
+    transition: margin-right $drawer-speed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}

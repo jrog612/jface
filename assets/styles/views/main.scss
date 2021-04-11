@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+main#main-container {
+  margin-top: $header-height;
+}
+
+#main-content {
+  padding-top: 52px;
+  text-align: center;
+  padding-bottom: 72px;
+}

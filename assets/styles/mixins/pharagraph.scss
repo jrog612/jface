@@ -1,0 +1,48 @@
+.p {
+  &-t1 {
+    font-size: 1.8rem;
+  }
+
+  &-t2 {
+    font-size: 1.5rem;
+  }
+
+  &-t3 {
+    font-size: 1.4rem;
+  }
+
+  &1 {
+    font-size: 1.3rem;
+  }
+
+  &2 {
+    font-size: 1.15rem;
+  }
+
+  &3 {
+    font-size: 1rem;
+  }
+
+  &4 {
+    font-size: .9rem;
+  }
+
+  &-s1 {
+    font-size: .8rem;
+  }
+
+  &-s2 {
+    font-size: .65rem;
+  }
+
+  &-s3 {
+    font-size: .55rem;
+  }
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  text-align: left;
+}

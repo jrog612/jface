@@ -1,0 +1,98 @@
+.drawer-inner {
+  padding-top: 24px;
+  text-align: left;
+
+  #profile-area {
+    padding: 16px;
+    text-align: center;
+
+    .blog-title {
+      margin: 6px 0 2px;
+    }
+
+    .owner {
+      color: rgba(white, .8)
+
+    }
+  }
+
+  #search-area {
+    padding: 16px 24px;
+    width: 100%;
+
+    .search-box {
+      height: 40px;
+      position: relative;
+
+      span {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      input {
+        height: 100%;
+        width: 100%;
+        padding: 1px 6px 1px 40px;
+      }
+    }
+  }
+
+  #blog-menu-area li,
+  .tt_category .category_list > li,
+  .tt_category .sub_category_list > li {
+    padding-top: 12px;
+  }
+
+  .tt_category li a.link_tit {
+    font-weight: bold;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+
+  .sub_category_list > li::before {
+    content: "\f054";
+    font-weight: 600;
+    margin-right: 5px;
+    font-family: "Font Awesome 5 Free";
+    font-size: .72rem;
+    position: relative;
+    bottom: .1rem
+  }
+
+  .side-menu {
+    padding: 16px 0 16px 20px;
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    li {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 250px;
+    }
+  }
+
+  .side-article-list,
+  .side-reply-list,
+  .side-tag-list {
+    li {
+      padding: 4px 0;
+
+      a {
+        display: block
+      }
+    }
+  }
+
+  .side-tag-list li a .tag-name::before {
+    content: '#';
+  }
+}

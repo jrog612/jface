@@ -1,0 +1,47 @@
+doctype html
+
+html(lang='ko')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    title [##_title_##]
+
+    link(rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosanskr.css")
+    script(src='https://kit.fontawesome.com/500fc882c7.js' crossorigin='anonymous')
+
+    // UI kit
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css")
+
+    script(src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js")
+    script(src='https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js')
+
+
+    script(scoped).
+      const $ = tjQuery
+    style
+      include:sass @/styles/app.scss
+
+  body(id='[##_body_id_##]')
+    block JFACE
+
+    script(src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js")
+    script.
+      const notyf = new Notyf({
+        duration: 3000,
+        position: {
+          x: 'center',
+          y: 'bottom',
+        },
+        types: [
+          {
+            type: 'black',
+            background: 'black',
+            icon: false,
+            dismissible: false,
+            className: "notyf-black p4"
+          },
+        ]
+      })

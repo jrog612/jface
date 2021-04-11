@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+header#header-container {
+  width: 100%;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid rgba(white, 0.4);
+  background-color: var(--b-blur-color) !important;
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 999;
+
+  #header-navs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    > .nav {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      &.left .nav-item {
+        margin-right: 22px;
+      }
+
+      &.right .nav-item {
+        margin-left: 26px;
+      }
+
+      .nav-item {
+        display: flex;
+        align-items: center;
+
+        .blog-menu-btn {
+        }
+
+        &.profile {
+          .title {
+            color: white;
+            font-weight: bold;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
