@@ -1,29 +1,20 @@
 @import "../../variables";
 
-@mixin action-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: $background-level3;
-  color: rgba(white, .8);
-  border-radius: 50%;
-  border: none;
-  height: 35px;
-  width: 35px;
-}
-
 #article-container .article-footer .article-action {
   display: flex;
   margin-top: 24px;
 
   .action-btn {
-    @include action-btn;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: $background-level3;
+    color: rgba(white, .8);
+    border-radius: 50%;
+    border: none;
+    height: 35px;
+    width: 35px;
     margin-right: 12px;
   }
-}
-
-#article-container .container_postbtn {
-  display: none;
 }
