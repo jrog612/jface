@@ -1,4 +1,14 @@
 #profile-area
-  img.circled.lazyload(data-src='[##_image_##]' data-sizes='auto' width='126' height='126')
-  .blog-title.p2 [##_title_##]
-  .owner.p4 [##_blogger_##]
+  .blogger-info
+    img.circled.lazyload(data-src='[##_image_##]' data-sizes='auto' width='126' height='126')
+    .blog-title.p2 [##_blogger_##]
+    .desc [##_desc_##]
+  .profile-buttons
+    if process.env.BLOG_ID
+      .subscribe-btn.profile-btn
+        button(class="btn_menu_toolbar btn_subscription  #subscribe" data-blog-id=`${process.env.BLOG_ID}` data-device='web_pc')
+          i(class="fas fa-star")
+    .rss-btn.profile-btn
+      a(href="[##_rss_url_##]" target="_blank"): i.fas.fa-rss
+    .profile-btn
+      a(href=`https://github.com/jrog612/jface` target="_blank"): i.fas.fa-code
