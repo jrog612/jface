@@ -62,9 +62,7 @@
         &::before {
           display: block;
           margin-bottom: 4px;
-          content: '\f10d';
-          font-family: "Font Awesome 5 Free";
-          font-weight: 600;
+          @include icon('\f10d');
         }
 
         padding: 0;
@@ -129,9 +127,7 @@
 
       &.open {
         a.btn-toggle-moreless::before {
-          content: '\f07c';
-          font-family: "Font Awesome 5 Free";
-          font-weight: 600;
+          @include icon('\f07c');
           margin-right: 8px;
         }
       }
@@ -146,9 +142,7 @@
         color: white !important;
 
         &::before {
-          content: '\f07b';
-          font-family: "Font Awesome 5 Free";
-          font-weight: 600;
+          @include icon('\f07b');
           margin-right: 8px;
         }
       }
@@ -176,9 +170,7 @@
 
 
       &::before {
-        content: '\f02b';
-        font-family: "Font Awesome 5 Free";
-        font-weight: bold;
+        @include icon('\f02b');
         font-size: .72em;
         margin-right: 4px;
       }

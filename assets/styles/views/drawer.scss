@@ -29,23 +29,13 @@
       .profile-btn {
         margin-left: 10px;
 
+        button, a {
+          @include iconBtn;
+        }
+
         &:first-child {
           margin-left: 0;
         }
-      }
-
-      button, a {
-        background-color: $background-level1;
-        border: none;
-        color: white;
-        border-radius: 50%;
-        width: 32px;
-        height: 32px;
-        outline: none;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
     }
   }
@@ -89,10 +79,8 @@
   }
 
   .sub_category_list > li::before {
-    content: "\f054";
-    font-weight: 600;
+    @include icon("\f054");
     margin-right: 5px;
-    font-family: "Font Awesome 5 Free";
     font-size: .72rem;
     position: relative;
     bottom: .1rem
