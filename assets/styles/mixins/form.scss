@@ -82,11 +82,22 @@ textarea {
     }
 
     .guest-input-form {
-      display: flex;
+      flex: 1;
+
+      @media (min-width: $mobile-width) {
+        display: flex;
+      }
 
       .guest-input {
+        flex: 1;
         margin-right: 16px;
-        width: 130px;
+        max-width: 300px;
+
+        @media (max-width: $mobile-width) {
+          &:first-child {
+            margin-bottom: 12px;
+          }
+        }
 
         input {
           border-radius: 4px;
