@@ -13,17 +13,14 @@ $max-width: 860px;
 $header-height: 64px;
 
 @mixin iconBtn {
-  background-color: $background-level1;
   border: none;
   color: white;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
   outline: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 }
 
 @mixin icon($content) {

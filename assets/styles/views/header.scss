@@ -34,6 +34,9 @@ header#header-container {
         align-items: center;
 
         .blog-menu-btn {
+        button {
+          @include iconBtn;
+          font-size: 1rem;
         }
 
         &.profile {
