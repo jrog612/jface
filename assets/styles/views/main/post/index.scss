@@ -1,5 +1,7 @@
-@import '../../variables';
-@import "related", "action";
+@import "related";
+@import "action";
+
+@import '../../../variables';
 
 #article-container .article-footer {
   .article-comment {

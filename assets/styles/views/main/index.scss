@@ -1,4 +1,10 @@
-@import '../variables.scss';
+@import "guestbook";
+@import "list";
+@import "paging";
+@import "post/index";
+
+@import '../../variables';
+
 
 main#main-container {
   margin-top: $header-height;
