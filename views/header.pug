@@ -6,5 +6,11 @@ header#header-container
           img.circled.lazyload(data-src='[##_image_##]' data-sizes='auto' width='36' height='36')
           .title.p-t3 [##_title_##]
       .nav.right
+        .nav-item#subscribe-nav
         .nav-item
-          button.icon-btn#menu-btn(data-drawer-open=''): i(class="fas fa-bars fa-lg")
+          button#menu-btn(data-drawer-open=''): i(class="fas fa-bars fa-lg")
+
+script.
+  $(document).ready(() => {
+    $('.menu_toolbar > div[class=btn_tool]').appendTo('#header-navs > .nav.right > #subscribe-nav')
+  })

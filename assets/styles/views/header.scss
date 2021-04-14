@@ -33,7 +33,6 @@ header#header-container {
         display: flex;
         align-items: center;
 
-        .blog-menu-btn {
         button {
           @include iconBtn;
           font-size: 1rem;
@@ -51,4 +50,19 @@ header#header-container {
   }
 }
 
+#subscribe-nav {
+  div[class=btn_tool] .btn_menu_toolbar.btn_subscription {
+    &.following::before {
+      @include icon('\f005');
+    }
 
+    &::before {
+      @include icon('\f005');
+      font-weight: 400;
+    }
+
+    *:not(i) {
+      display: none;
+    }
+  }
+}
