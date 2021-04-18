@@ -61,7 +61,7 @@
   padding: 24px 0;
 
   &.textbox-parent {
-    border-bottom: 1px solid rgba(white, .6);
+    border-bottom: 1px solid $border-level3;
   }
 
   .list-item-container {
@@ -70,6 +70,14 @@
 
       .info {
         margin-left: 16px;
+
+        .author {
+          font-weight: bold;
+        }
+
+        .published_at {
+          color: $text-level3;
+        }
 
         .author:empty::before {
           content: "(비밀댓글)"
@@ -80,6 +88,7 @@
     .item-body {
       padding: 15px 0 5px $padding-left;
       line-height: 1.5em;
+      color: $text-level2;
     }
 
     .item-footer {
@@ -89,6 +98,7 @@
 
       a {
         margin-right: 8px;
+        color: $text-level3;
       }
     }
   }

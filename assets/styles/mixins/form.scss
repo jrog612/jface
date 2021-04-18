@@ -15,7 +15,7 @@ textarea {
 
 .textbox-form {
   .jtextarea {
-    background-color: $background-level2;
+    background-color: $background-level1;
     border-radius: 16px;
     padding: 20px;
     height: 160px;
@@ -55,6 +55,7 @@ textarea {
           height: 32px;
           border: none;
           cursor: pointer;
+          background-color: $background-level1;
         }
       }
 
@@ -65,7 +66,7 @@ textarea {
 
         #secret-label::before {
           @include icon('\f3c1');
-          font-size: 1.25rem;
+          font-size: .85rem;
         }
 
         input[type=checkbox]:checked + #secret-label::before {
