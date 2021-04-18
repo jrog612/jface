@@ -6,7 +6,7 @@ mixin entryHeader(type)
       a.category.p4(href=`[##_${type}_rep_category_link_##]`) #{`[##_${type}_rep_category_##]`}
     .title.p-t1 #{`[##_${type}_rep_title_##]`}
     .entry-admin-btn.p4
-      .published_at #{`[##_${type}_rep_date_##]`}
+      .published_at.p4 #{`[##_${type}_rep_date_##]`}
       if type !== 'notice'
         s_ad_div
           .admin-btn: a(href='[##_s_ad_m_link_##]') 수정
