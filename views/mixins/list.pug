@@ -1,3 +1,12 @@
+mixin articleList
+  s_list
+    .article-list
+      .list-title.p2 [##_list_conform_##] [##_list_count_##]개
+      ul
+        #{`s_list_rep`}
+          +articleListItem
+
+
 mixin textboxList(type)
   #{`s_${type}_container`}
     .textbox-list
