@@ -7,15 +7,11 @@ html(lang='ko')
 
     title [##_title_##]
 
-    link(rel="preconnect" href="https://fonts.gstatic.com")
-    link(href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet")
-
     script(src='https://kit.fontawesome.com/500fc882c7.js' crossorigin='anonymous')
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css")
 
     // UI kit
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css")
-    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css")
-
     script(src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js")
     script(src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js")
 
@@ -28,6 +24,11 @@ html(lang='ko')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/dart.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/dockerfile.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/django.min.js")
+
+    // webfont
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet")
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-full.css')
 
     script(scoped).
       const $ = tjQuery
