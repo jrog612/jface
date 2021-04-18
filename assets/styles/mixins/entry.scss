@@ -1,7 +1,7 @@
 @import '../variables';
 
 .entry-header {
-  margin-bottom: 24px;
+  margin-bottom: 36px;
   border-bottom: 1px solid white;
   text-align: left;
 
@@ -10,7 +10,7 @@
     font-weight: 500;
   }
 
-  .published_at {
+  .published_at, .admin-btn {
     color: $text-level3;
   }
 
