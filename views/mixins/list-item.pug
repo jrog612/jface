@@ -12,7 +12,7 @@ mixin textboxListItem(type, isChild=false)
   li.textbox-list-item(class=isChild ? 'textbox-child' : 'textbox-parent', id=`[##_${type}_rep_id_##]`)
     div.list-item-container
       .item-header
-        img.author-thumbnail.lazyload(data-src=`[##_${type}_rep_logo_##]` data-sizes='auto' width='48' height='48')
+        img.circled.lazyload(data-src=`[##_${type}_rep_logo_##]` data-sizes='auto' width='48' height='48')
         .info
           .author #{`[##_${type}_rep_name_##]`}
           .published_at.p-s1 #{`[##_${type}_rep_date_##]`}
