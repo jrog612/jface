@@ -1,14 +1,13 @@
 header#header-container
-  .inner.limited
-    #header-navs
-      .nav.left
-        a.nav-item.profile(href='[##_blog_link_##]')
-          img.circled.lazyload(data-src='[##_image_##]' data-sizes='auto' width='36' height='36')
-          .title.p-t3 [##_title_##]
-      .nav.right
-        .nav-item#subscribe-nav
-        .nav-item
-          button#menu-btn(data-drawer-open=''): i(class="fas fa-bars fa-lg")
+  .nav.left
+    .nav-item
+      a.profile(href='[##_blog_link_##]')
+        img.lazyload(data-src='[##_image_##]' data-sizes='auto' width='48' height='48')
+        .f-dh.p-t1.blog-title [##_title_##]
+  .nav.right
+    .nav-item#subscribe-nav
+    .nav-item
+      button.icon-btn#menu-btn(data-drawer-open=''): i.fas.fa-bars.fa-lg
 
 script.
   $(document).ready(() => {

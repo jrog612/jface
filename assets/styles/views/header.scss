@@ -5,47 +5,59 @@ header#header-container {
   height: $header-height;
   position: fixed;
   top: 0;
-  border-bottom: 1px solid rgba(white, 0.4);
-  background-color: var(--b-blur-color) !important;
+  right: 0;
+  left: 0;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, .06);
+  background-color: rgba(white, .72) !important;
   backdrop-filter: saturate(180%) blur(20px);
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
 
-  #header-navs {
+  > .nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
 
-    > .nav {
+    &.left .nav-item {
+      margin-right: 22px;
+    }
+
+    &.right .nav-item {
+      margin-left: 26px;
+    }
+
+    .nav-item {
       display: flex;
       align-items: center;
-      height: 100%;
 
-      &.left .nav-item {
-        margin-right: 22px;
+      button {
+        font-size: 1rem;
       }
 
-      &.right .nav-item {
-        margin-left: 26px;
-      }
-
-      .nav-item {
+      .profile {
         display: flex;
         align-items: center;
+        height: 100%;
 
-        button {
-          @include iconBtn;
-          font-size: 1rem;
+        img {
+          border-radius: 50%;
+          border: 1px solid rgba(black, .1);
         }
 
-        &.profile {
-          .title {
-            color: white;
-            font-weight: bold;
-            margin-left: 12px;
+        .blog-title {
+          font-size: 1.7rem;
+          margin-left: 14px;
+
+          @media (max-width: $mobile-width) {
+            font-size: 1.5rem;
           }
         }
       }
+
+
     }
   }
 }
