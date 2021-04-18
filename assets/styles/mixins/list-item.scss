@@ -33,6 +33,11 @@
         @media (max-width: $mobile-width) {
           font-size: 1.3rem;
         }
+
+        img {
+          width: 14px !important;
+          height: 12px !important;
+        }
       }
 
       .summary {
