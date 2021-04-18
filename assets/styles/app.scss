@@ -4,14 +4,10 @@
 @import 'views/index';
 
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
   box-sizing: border-box;
-}
-
-a {
-  pointer-events: initial;
 }
 
 *, *::before, *::after {
@@ -26,8 +22,7 @@ input, textarea {
 }
 
 html {
-  background-color: $background-level1;
-  color: white;
+  color: $text-level1;
 
   body {
     overflow-x: hidden;
@@ -40,12 +35,12 @@ html {
   }
 
   a {
-    color: rgba(white, .9);
     text-decoration: none !important;
+    pointer-events: initial;
+    color: inherit;
 
     &:hover {
-      color: white;
-      transition-duration: .2s;
+      color: inherit;
     }
   }
 

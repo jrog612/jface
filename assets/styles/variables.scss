@@ -1,20 +1,29 @@
-$background-level1: #1e1f21;
-$background-level2: #292a2d;
-$background-level3: #353638;
-$background-level4: #53575c;
+$background-level1: #f8f8f8;
+$background-level2: #e9e9e9;
+
+$text-level1: rgba(black, .9);
+$text-level2: rgba(black, .7);
+$text-level3: rgba(black, .5);
+$text-level4: rgba(black, .3);
+
+$border-level1: rgba(black, .7);
+$border-level2: rgba(black, .5);
+$border-level3: rgba(black, .3);
+$border-level4: rgba(black, .1);
+
 
 $blue: #5db0d7; // a
-$red: red;
+$red: #f0506e;
 $orange: #f0506e;
 
-$mobile-width: 672px;
-
 $max-width: 860px;
+$mobile-width: 672px;
 $header-height: 64px;
+$drawer-width: 300px;
+
 
 @mixin iconBtn {
   border: none;
-  color: white;
   outline: none;
   cursor: pointer;
   display: flex;

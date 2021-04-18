@@ -2,11 +2,6 @@
 
 .jinput {
   border: none;
-  color: white;
-
-  &.search {
-    background-color: $background-level1;
-  }
 }
 
 textarea {
@@ -33,7 +28,6 @@ textarea {
       height: 120px;
       border: none;
       outline: none;
-      color: white;
       overflow-x: hidden;
       overflow-y: scroll;
     }
@@ -71,7 +65,6 @@ textarea {
 
         #secret-label::before {
           @include icon('\f3c1');
-          color: white;
           font-size: 1.25rem;
         }
 
@@ -104,7 +97,6 @@ textarea {
           width: 100%;
           border: none;
           outline: none;
-          color: white;
           padding: 4px;
           background-color: $background-level2;
         }

@@ -1,6 +1,5 @@
-@import "..//variables";
+@import "../variables";
 
-$drawer-width: 300px;
 $drawer-speed: .2s;
 $backdrop-background: rgba(0, 0, 0, .5);
 
@@ -29,7 +28,7 @@ drawer-menu {
   margin-right: calc(#{$drawer-width} * -1);
   width: $drawer-width;
   transition: margin-right $drawer-speed;
-  background: $background-level3;
+  background: $background-level1;
 }
 
 [data-drawer-backdrop] {

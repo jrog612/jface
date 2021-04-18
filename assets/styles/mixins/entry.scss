@@ -24,7 +24,6 @@
   margin-bottom: 36px;
 
   span, blockquote, h2, h3, h4 {
-    color: white !important;
   }
 
   figure[data-ke-type=opengraph] {
@@ -39,7 +38,6 @@
       background: $background-level2;
 
       > p {
-        color: white !important;
       }
     }
 
@@ -65,7 +63,6 @@
       }
 
       padding: 0;
-      color: rgba(white, .8) !important;
       border: 20px;
       background-color: transparent;
       border: none;
@@ -97,7 +94,6 @@
   }
 
   figure figcaption {
-    color: rgba(white, .8) !important;
     font-size: .9rem;
   }
 
@@ -132,12 +128,11 @@
 
     a.btn-toggle-moreless {
       margin: auto;
-      background-color: $background-level3;
+      background-color: $background-level2;
       border-radius: 16px;
       padding: 2px 14px;
       font-size: .85rem !important;
       font-weight: 600;
-      color: white !important;
 
       &::before {
         @include icon('\f07b');
@@ -160,7 +155,7 @@
     margin-top: 10px;
     margin-right: 10px;
     border-radius: 6px;
-    background-color: $background-level3;
+    background-color: $background-level2;
     display: inline-block;
     height: 28px;
     line-height: 28px;

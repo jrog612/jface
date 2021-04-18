@@ -1,6 +1,9 @@
+@import '../../variables';
+
 .list-info {
   text-align: left;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid $text-level2;
   font-weight: bold;
   padding-bottom: 16px;
+  color: $border-level1;
 }
