@@ -1,13 +1,11 @@
 mixin articleListItem
   li.article-list-item
     .list-item-container
+      .category.p4: a(href=`[##_list_rep_category_link_##]`) #{`[##_list_rep_category_##]`}
       a(href=`[##_list_rep_link_##]`).item-body
         h1.title #{`[##_list_rep_title_##]`}
         p.summary  #{`[##_list_rep_summary_##]`}
-      .item-footer.p-s1
-        .category: a(href=`[##_list_rep_category_link_##]`) #{`[##_list_rep_category_##]`}
-        .published_at
-          span #{`[##_list_rep_date_year_##]`}.#{`[##_list_rep_date_month_##]`}.#{`[##_list_rep_date_day_##]`}. #{`[##_list_rep_date_hour_##]`}:#{`[##_list_rep_date_minute_##]`}
+      .published_at.p-s1 #{`[##_list_rep_date_year_##]`}.#{`[##_list_rep_date_month_##]`}.#{`[##_list_rep_date_day_##]`}. #{`[##_list_rep_date_hour_##]`}:#{`[##_list_rep_date_minute_##]`}
 
 
 mixin textboxListItem(type, isChild=false)

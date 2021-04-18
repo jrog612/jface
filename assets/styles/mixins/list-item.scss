@@ -5,8 +5,14 @@
     padding: 32px 0;
     justify-content: space-between;
     text-align: left;
-    border-bottom: 1px solid rgba(white, .4);
+    border-bottom: 1px solid $border-level4;
     width: 100%;
+
+    .category {
+      margin-bottom: 6px;
+      color: $red;
+      font-weight: 500;
+    }
 
     .item-body {
       cursor: pointer;
@@ -19,7 +25,6 @@
       }
 
       .title {
-        color: white;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -34,24 +39,18 @@
         margin-top: 1px;
         overflow: hidden;
         max-height: 80px;
+        color: $text-level2;
         display: -webkit-box;
         -webkit-line-clamp: 3; /* number of lines to show */
         -webkit-box-orient: vertical;
       }
     }
 
-    .item-footer {
+    .published_at {
       margin-top: 16px;
       display: flex;
       justify-content: flex-start;
-
-      > div {
-        margin-right: 10px;
-      }
-
-      .published_at {
-        color: rgba(white, .8)
-      }
+      color: $text-level3;
     }
   }
 }
