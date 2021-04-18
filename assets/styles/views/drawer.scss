@@ -8,40 +8,18 @@
     padding: 16px 24px;
     text-align: center;
 
-    .blogger-info {
-      margin-bottom: 16px;
-
-      .blog-title {
-        margin: 8px 0;
-      }
-
-      .desc {
-        padding: 16px 0;
-        border-top: 1px solid rgba(white, .6);
-        border-bottom: 1px solid rgba(white, .6);
-      }
+    img.circled {
+      border: 1px solid rgba(0, 0, 0, .1);
     }
 
-    .profile-buttons {
-      display: flex;
-      justify-content: center;
+    .blog-title {
+      margin: 8px 0;
+    }
 
-      .profile-btn {
-        margin-left: 10px;
-
-        button, a {
-          @include iconBtn;
-
-          background-color: $background-level1;
-          border-radius: 50%;
-          width: 32px;
-          height: 32px;
-        }
-
-        &:first-child {
-          margin-left: 0;
-        }
-      }
+    .desc {
+      padding: 16px 0;
+      border-top: 1px solid rgba(black, .6);
+      border-bottom: 1px solid rgba(black, .6);
     }
   }
 
@@ -64,6 +42,7 @@
       }
 
       input {
+        background-color: $background-level2;
         height: 100%;
         width: 100%;
         padding: 1px 6px 1px 40px;
