@@ -24,6 +24,7 @@
   margin-bottom: 36px;
 
   span, blockquote, h2, h3, h4 {
+    color: $text-level1 !important;
   }
 
   figure[data-ke-type=opengraph] {
@@ -50,8 +51,9 @@
     font-style: normal;
 
     &[data-ke-style="style2"] {
-      font-size: .9rem;
-      border-left: 2px solid rgba(white, 0.4);
+      font-size: 1rem;
+      border-left: 2px solid $border-level3;
+      color: $text-level3 !important;
       padding-left: 12px;
     }
 
@@ -71,7 +73,7 @@
   }
 
   a {
-    color: #5db0d7 !important;
+    color: $red !important;
   }
 
   h2 {
@@ -98,7 +100,6 @@
   }
 
   code {
-    background-color: #292a2d !important;
     border-radius: 4px;
   }
 
@@ -109,7 +110,7 @@
     position: relative;
 
     &::before {
-      border-bottom: 1px dashed rgba(white, .8);
+      border-bottom: 1px dashed $border-level3;
       content: '';
       z-index: -100;
       position: absolute;
@@ -121,21 +122,22 @@
 
     &.open {
       a.btn-toggle-moreless::before {
-        @include icon('\f07c');
+        @include icon('\f139');
         margin-right: 8px;
       }
     }
 
     a.btn-toggle-moreless {
       margin: auto;
-      background-color: $background-level2;
+      background-color: black;
+      color: white !important;
       border-radius: 16px;
       padding: 2px 14px;
       font-size: .85rem !important;
       font-weight: 600;
 
       &::before {
-        @include icon('\f07b');
+        @include icon('\f13a');
         margin-right: 8px;
       }
     }
@@ -155,7 +157,8 @@
     margin-top: 10px;
     margin-right: 10px;
     border-radius: 6px;
-    background-color: $background-level2;
+    background-color: $background-level1;
+    color: $text-level3;
     display: inline-block;
     height: 28px;
     line-height: 28px;

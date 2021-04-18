@@ -2,14 +2,14 @@
 
 #article-container .article-footer .article-related-list {
   text-align: left;
-  background-color: $background-level2;
+  background-color: $background-level1;
   border: none;
   border-radius: 6px;
   padding: 20px;
 
   .list-title {
     font-weight: bold;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $border-level1;
     padding: 5px 2px;
     margin-bottom: 8px;
     display: flex;
