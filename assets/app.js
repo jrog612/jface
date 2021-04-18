@@ -13,7 +13,11 @@
  */
 require('lazysizes')
 
-// import './vue'
 import {tinyDrawer} from './js/tinyDrawer'
+import {imageResizing} from './js/imageResizing'
 
 tinyDrawer()
+
+window.jface = {
+  imageResizing
+}
