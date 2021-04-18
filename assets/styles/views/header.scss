@@ -58,7 +58,12 @@ header#header-container {
 }
 
 #subscribe-nav {
+  button {
+    @include iconBtn
+  }
+
   div[class=btn_tool] .btn_menu_toolbar.btn_subscription {
+
     &.following::before {
       @include icon('\f005');
     }
