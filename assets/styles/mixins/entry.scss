@@ -36,7 +36,9 @@
     cursor: default !important;
   }
 
-  span, blockquote, h2, h3, h4 {
+  p span,
+  blockquote,
+  h2, h3, h4 {
     color: $text-level1 !important;
   }
 
@@ -120,11 +122,23 @@
     figcaption {
       font-size: .9rem;
     }
-
   }
 
   code {
     border-radius: 4px;
+  }
+
+  pre {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+
+    code {
+      background-color: $background-level1 !important;
+      padding: 15px;
+      font-size: .85rem;
+    }
   }
 
   div[data-ke-type="moreLess"] {

@@ -15,9 +15,11 @@ require('lazysizes')
 
 import {tinyDrawer} from './js/tinyDrawer'
 import {imageResizing} from './js/imageResizing'
+import hljs from './js/hljs'
 
 tinyDrawer()
 
 window.jface = {
-  imageResizing
+  imageResizing,
+  hljs,
 }
