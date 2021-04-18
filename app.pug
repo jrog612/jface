@@ -18,6 +18,8 @@ html(lang='ko')
 
     script(src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js")
     script(src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js")
+
+    // clipboard.js
     script(src='https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js')
 
 
@@ -25,6 +27,7 @@ html(lang='ko')
       const $ = tjQuery
     style
       include:sass @/styles/app.scss
+      include @/styles/libs/load-awesome/ball-clip-rotate.min.css
 
   body(id='[##_body_id_##]')
     block JFACE

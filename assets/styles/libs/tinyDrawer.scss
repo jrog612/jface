@@ -24,7 +24,7 @@ drawer-menu,
 }
 
 drawer-menu {
-  z-index: 99999;
+  z-index: $drawer-layer;
   margin-right: calc(#{$drawer-width} * -1);
   width: $drawer-width;
   transition: margin-right $drawer-speed;

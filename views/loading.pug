@@ -1,0 +1,9 @@
+#loading
+  .la-ball-clip-rotate
+    each _ in Array(1)
+      div
+
+script.
+  $(window).on('load', () => {
+    setTimeout(() => $('#loading').fadeOut(500), 2)
+  })
