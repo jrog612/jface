@@ -6,3 +6,7 @@
   margin: auto;
   height: 100%;
 }
+
+.icon-btn {
+  @include iconBtn;
+}
