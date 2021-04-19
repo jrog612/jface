@@ -1,19 +1,10 @@
-mixin entryHeader(type)
-  .entry-header
-    if type === 'notice'
-      .category.p4 공지사항
-    else
-      a.category.p4(href=`[##_${type}_rep_category_link_##]`) #{`[##_${type}_rep_category_##]`}
-    .title.p-t1 #{`[##_${type}_rep_title_##]`}
-    .entry-admin-btn.p4
-      .published_at.p4 #{`[##_${type}_rep_date_##]`}
-      if type !== 'notice'
-        s_ad_div
-          .admin-btn: a(href='[##_s_ad_m_link_##]') 수정
-          .admin-btn: a(href='#' onclick='[##_s_ad_d_onclick_##]') 삭제
+mixin entry(type)
+  if type === 'page'
+    - pType = 'article'
+  else
+    - pType = type
 
-mixin entryBody(type)
-  .entry-body
-    article #{`[##_${type}_rep_desc_##]`}
-    if type !== 'notice'
-      s_tag_label: .entry-tags.p-s1 [##_tag_label_rep_##]
+  .entry-container
+    include entry/header
+    include entry/body
+    include entry/footer

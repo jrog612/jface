@@ -1,0 +1,28 @@
+@import '../../variables';
+
+.entry-header {
+  margin-bottom: 36px;
+  border-bottom: 1px solid white;
+  text-align: left;
+
+  .category {
+    color: $red;
+    font-weight: 500;
+  }
+
+  .published_at, .admin-btn {
+    color: $text-level3;
+  }
+
+  .title {
+    margin: 2px 0;
+  }
+
+  .entry-admin-btn {
+    display: flex;
+
+    .admin-btn {
+      margin-left: 6px;
+    }
+  }
+}
