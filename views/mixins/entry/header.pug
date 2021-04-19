@@ -6,7 +6,7 @@
   .title.p-t1 #{`[##_${pType}_rep_title_##]`}
   .entry-admin-btn.p4
     .published_at.p4 #{`[##_${pType}_rep_date_##]`}
-    if type !== 'notice'
+    if type === 'article'
       s_ad_div
         .admin-btn: a(href='[##_s_ad_m_link_##]') 수정
         .admin-btn: a(href='#' onclick='[##_s_ad_d_onclick_##]') 삭제
