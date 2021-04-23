@@ -22,7 +22,7 @@ script.
     if (getVars('backtick')) {
       // TODO: html을 직접적으로 변경하는 코드라 위험할 수 있음.
       const pattern = /`([a-zA-Z가-힣\d$&+,:;=?@#|'<>.^*()%!·\-_ \t\r]+)`+?/g
-      $('article .tt_article_useless_p_margin').find('p > span, > ul li, > ol li').each((index, item) => {
+      $('article .tt_article_useless_p_margin').find('> p, > ul li, > ol li, div.moreless-content > p').each((index, item) => {
         if (pattern.test(item.textContent)) {
           const el = $(item)
           el.html(el.html().replace(pattern, '<code>$1</code>'))
