@@ -1,11 +1,12 @@
-- const tistoryVars = {'backtick': 'bool',}
-  each type, name in tistoryVars
-    - const value = `[##_var_${name}_##]`
-      div.jface-vars&attributes({'data-vars-name': name, 'data-vars-value': value, 'data-vars-type': type})
+#jface-vars
+  - const tistoryVars = {'backtick': 'bool',}
+    each type, name in tistoryVars
+      - const value = `[##_var_${name}_##]`
+        div.jface-var&attributes({'data-vars-name': name, 'data-vars-value': value, 'data-vars-type': type})
 
 script.
   function getVars(name) {
-    const target =$(`.jface-vars[data-vars-name="${name}"]`)
+    const target =$(`#jface-vars .jface-var[data-vars-name="${name}"]`)
     const value = target.data('vars-value')
     const type = target.data('vars-type')
 
@@ -18,6 +19,6 @@ script.
   }
 
 style.
-  .jface-vars {
+  .jface-var {
     display: none;
   }
