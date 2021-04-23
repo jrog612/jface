@@ -19,6 +19,17 @@ script.
       return this.nodeType === 3
     }).remove()
 
+    if (getVars('backtick')) {
+      // TODO: html을 직접적으로 변경하는 코드라 위험할 수 있음.
+      const pattern = /`([a-zA-Z가-힣\d$&+,:;=?@#|'<>.^*()%!·\-_ \t\r]+)`+?/g
+      $('article .tt_article_useless_p_margin').find('p > span, > ul li, > ol li').each((index, item) => {
+        if (pattern.test(item.textContent)) {
+          const el = $(item)
+          el.html(el.html().replace(pattern, '<code>$1</code>'))
+        }
+      })
+    }
+
     // URL 공유 클립보드 복사
     $('button#url-clipboard').attr('data-clipboard-text', document.location.href.split('?')[0])
     const cb = new ClipboardJS('button#url-clipboard')
@@ -26,4 +37,3 @@ script.
       notyf.open({type: 'black', message: '링크가 클립보드에 복사되었습니다.'})
     })
   })
-
