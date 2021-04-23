@@ -2,7 +2,7 @@
 <skin>
    <information>
       <name>Jface</name>
-      <version>0.0.1</version>
+      <version>2.0.1</version>
       <description>
          <![CDATA[즈록의 블로그 스킨]]>
       </description>
@@ -10,8 +10,23 @@
          <![CDATA[MIT]]>
       </license>
    </information>
+  <variables>
+    <variablegroup name="본문">
+      <variable>
+        <name>backtick</name>
+        <label>
+          <![CDATA[ 억음 부호 코드화 ]]>
+          </label>
+        <description>
+          <![CDATA[ 억음 부호(`)로 감싸진 부분을 코드 구문으로 자동 치환합니다. 해당 옵션을 켜면 글 구조에 예기치 못한 문제가 발생할 수 있습니다. ]]>
+          </description>
+        <type>BOOL</type>
+        <default>true</default>
+      </variable>
+    </variablegroup>
+  </variables>
    <author>
-      <name>Yongjin Jo</name>
+      <name>Jrog</name>
       <homepage>https://jrog.tistory.com</homepage>
       <email>jrog612@gmail.com</email>
    </author>
