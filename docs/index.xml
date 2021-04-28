@@ -23,6 +23,17 @@
         <type>BOOL</type>
         <default>true</default>
       </variable>
+      <variable>
+        <name>latex</name>
+        <label>
+          <![CDATA[ LaTex 사용 ]]>
+        </label>
+        <description>
+          <![CDATA[ LaTex 문법을 본문에서 사용합니다. ]]>
+        </description>
+        <type>BOOL</type>
+        <default>true</default>
+      </variable>
     </variablegroup>
   </variables>
    <author>

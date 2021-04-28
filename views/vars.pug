@@ -1,5 +1,5 @@
 #jface-vars
-  - const tistoryVars = {'backtick': 'bool',}
+  - const tistoryVars = {'backtick': 'bool', 'latex': 'bool'}
     each type, name in tistoryVars
       - const value = `[##_var_${name}_##]`
         div.jface-var&attributes({'data-vars-name': name, 'data-vars-value': value, 'data-vars-type': type})

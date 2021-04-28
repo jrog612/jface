@@ -25,6 +25,13 @@ html(lang='ko')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/dockerfile.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/django.min.js")
 
+    s_if_var_latex
+      // Mathjax
+      script(src="https://polyfill.io/v3/polyfill.min.js?features=es6")
+      script(id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js")
+      script(scoped).
+        MathJax = {tex: {inlineMath: [['\\$', '\\$'], ['\\(', '\\)']]}};
+
     // webfont
     link(rel="preconnect" href="https://fonts.gstatic.com")
     link(href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet")
@@ -36,24 +43,21 @@ html(lang='ko')
       include:sass @/styles/app.scss
       include @/styles/libs/load-awesome/ball-clip-rotate.min.css
 
+    script(src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js")
+      script.
+        const notyf = new Notyf({
+          duration: 3000,
+          position: {x: 'center', y: 'bottom'},
+          types: [
+            {
+              type: 'black',
+              background: 'black',
+              icon: false,
+              dismissible: false,
+              className: "notyf-black p4"
+            },
+          ]
+        })
+
   body(id='[##_body_id_##]')
     block JFACE
-
-    script(src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js")
-    script.
-      const notyf = new Notyf({
-        duration: 3000,
-        position: {
-          x: 'center',
-          y: 'bottom',
-        },
-        types: [
-          {
-            type: 'black',
-            background: 'black',
-            icon: false,
-            dismissible: false,
-            className: "notyf-black p4"
-          },
-        ]
-      })
