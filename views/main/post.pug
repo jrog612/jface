@@ -1,8 +1,9 @@
 s_article_rep
-  #article
-    s_permalink_article_rep
-      .permalink-article
-        +entry('article')
+  .inner.limited
+    #article
+      s_permalink_article_rep
+        .permalink-article
+          +entry('article')
 
 script.
   $(document).ready(() => {
