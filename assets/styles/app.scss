@@ -53,6 +53,11 @@ html {
 #jface-root {
   height: 100vh;
   text-align: center;
+
+  main#main-container {
+    padding: 0 16px;
+  }
+
 }
 
 .notyf-black {
