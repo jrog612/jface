@@ -11,15 +11,18 @@
  *
  * after import assets it will be contained in app.js
  */
+
 require('lazysizes')
 
 import {tinyDrawer} from './js/tinyDrawer'
 import {imageResizing} from './js/imageResizing'
 import hljs from './js/hljs'
+import notyf from "./js/notyf";
 
 tinyDrawer()
 
 window.jface = {
   imageResizing,
   hljs,
+  notyf,
 }

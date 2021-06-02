@@ -35,6 +35,6 @@ script.
     $('button#url-clipboard').attr('data-clipboard-text', document.location.href.split('?')[0])
     const cb = new ClipboardJS('button#url-clipboard')
     cb.on('success', (e) => {
-      notyf.open({type: 'black', message: '링크가 클립보드에 복사되었습니다.'})
+      window.jface.notyf.open({type: 'black', message: '링크가 클립보드에 복사되었습니다.'})
     })
   })
