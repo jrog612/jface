@@ -1,1 +1,13 @@
 footer#footer-container
+  .footer-nav
+    .nav.nav-left
+    .nav.nav-right
+      a.scroll-top-btn
+        i(class="fas fa-chevron-up")
+
+script.
+  $(window).ready(() => {
+    $('a.scroll-top-btn').on('click', () => {
+      $('html, body').animate({scrollTop: 0}, 150);
+    })
+  })
