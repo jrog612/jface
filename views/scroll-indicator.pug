@@ -1,0 +1,14 @@
+#scroll-indicator
+  .progress-bar
+
+script.
+  $(document).ready(() => {
+    scrollIndicating()
+    $(window).on('scroll', scrollIndicating)
+  })
+
+  function scrollIndicating(element) {
+    const winScroll = $(window).scrollTop()
+    const height = $(document).outerHeight() - $(window).height()
+    $('#scroll-indicator .progress-bar').css('width', `${(winScroll / height) * 100}%`)
+  }

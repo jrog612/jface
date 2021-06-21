@@ -1,0 +1,17 @@
+@import "../variables";
+
+$indicator-height: 3px;
+
+#scroll-indicator {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $indicator-height;
+  z-index: $indicator-layer;
+
+  .progress-bar {
+    height: $indicator-height;
+    width: 0;
+    background-color: $text-level1;
+  }
+}
